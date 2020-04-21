@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AutoEvents</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/6.0.2/firebase-app.js"></script>
+  
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/6.0.2/firebase-auth.js"></script>
+  <script defer src="/__/firebase/6.0.2/firebase-database.js"></script>
+  <script defer src="/__/firebase/6.0.2/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/6.0.2/firebase-storage.js"></script>
+  
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+  
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+
+<body style="background-color:rgb(32, 44, 38);">
+
+    <div class="container section center white-text">
+      <div class="col s12 m4">
+        <h1>AutoEvents</h1>
+        <img id="imagen" class="z-depth-2" height="430" src="img/AutoSeguro.jpg">
+        <h3 class="white-text">Evento detectado:</h3>
+        <p id="alerta" class="green-text" style="font-size:2vw;">ninguno</p>
+      </div>
+    </div>
+
+    <p id="load" class="center grey-text">Firebase SDK Loading&hellip;</p>
+
+    <footer class="page-footer black center">
+      <div class="container">
+          <div class="row">
+              <div class="col s12 grey-text">
+                  Uriel González | GitHub:
+                  <a href="https://github.com/UrielGlez">github.com/UrielGlez</a>
+              </div>
+          </div>
+      </div>
+      <div class="footer-copyright black">
+          <div class="container center">
+              &copy;Copyrigth 2020. All rights reserved.
+          </div>
+      </div>
+    </footer>
+
+    <!--Estilos para javaScript llamando a jquerty desde su pagina y a el archivo en la carpeta local -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--Iniciamos el servicio de firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+      const config = {
+        apiKey: "AIzaSyCKk8kuDx9y_DlxNuFceBe3Lg7t6ILCKa8",
+        authDomain: "temp-processing.firebaseapp.com",
+        databaseURL: "https://temp-processing.firebaseio.com",
+        projectId: "temp-processing",
+        storageBucket: "temp-processing.appspot.com",
+        messagingSenderId: "633088005193",
+        appId: "1:633088005193:web:87d38d3eb9b93c3bf7db98",
+        measurementId: "G-TCFTN8FG81"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="jsfunction/mainSensores.js"></script>
+
+</body>
+
+</html>
